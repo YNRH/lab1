@@ -5,10 +5,131 @@
     <title>Etiqueta de Video</title>
   </head>
   <body>
-    <center>
-      <video width="320" height="240" controls="controls" poster="img.jpg">
-        <source src="archivos/video/video.mp4" type="video/mp4" />
-      </video>
-    </center>
+    <form action="">
+      <h1>Travel Authorization Form</h1>
+
+      <section>
+        <h3>Sección A: Información del cliente</h3>
+
+        <p>
+          <label for="cargo">Cargo:</label>
+          <input type="text" name="cargo" id="cargo" placeholder="" maxlength="100" pattern="[A-Z]" >
+        </p>
+        
+        <p>
+          <label for="nombre">Nombre:</label>
+          <input type="text" name="name" id="name" placeholder="" minlength="4" maxlength="100" pattern="[A-Z]" >
+        </p>
+        
+        <p>
+          <label for="apellido">Primer apellido:</label>
+          <input type="text" name="apellido" id="apellido" placeholder="">
+        </p>
+        
+        <p>
+          <label for="apellido">Segundo apellido:</label>
+          <input type="text" name="apellido" id="apellido" placeholder="">
+        </p>
+        
+        <p>
+          <label for="email">Correo electrónico:</label>
+          <input type="text" name="email" id="email" placeholder="" required pattern="[A-Za-z0-9]+" >
+        </p>
+        
+        <p>
+          <label for="number">Numeró de teléfono:</label>
+          <input type="text" name="number" id="number" placeholder="" pattern="[0-9]{9}" >
+        </p>
+      </section>
+      
+      <section>
+        <h3>Sección B: Información del viaje</h3>
+        <div>
+          <p>
+            <label for="aerolinea">Nombre de aerolinea:</label>
+            <select name="combo">
+              <option value="1">Latam</option>
+              <option value="2" selected>Easypi</option> <!-- Opción por defecto -->
+              <option value="3">Airline</option>
+              <option value="4">vuelo rapido</option>
+            </select>
+          </p>
+          
+          <p>
+            <label for="destino">Destino:</label>
+            <input type="text" name="destino" id="destino" placeholder="" required>
+          </p>
+          
+          <p>
+            <label for="salida">Fecha de salida:</label>
+            <input type="date" name="salida" id="salida" min="2020-01-01">
+          </p>
+          
+          <p>
+            <label for="regreso">Fecha de regreso:</label>
+            <input type="date" name="regreso" id="regreso" min="2020-01-01">
+          </p>
+          
+          <p>
+            <label for="coste">Coste estimado:</label>
+            <input type="number" name="coste" id="coste" placeholder="", minlength="100" maxlength="1000" pattern="[0-9]" >
+          </p>
+  
+          <p>
+            <label>¿Incluye la visita del cliente?<input type="checkbox" name="visita" value="visita"></label>
+          </p>
+        </div>
+        
+        <div>
+          <fieldset>
+            <legend>Gastos adicionales estimados</legend>
+            <p>
+              <label> Alquiler de coche</label>
+              <input type="text" name="size" id="size_1" value="" minlength="100" maxlength="600">
+            </p>
+            <p>
+              <label> Hotel</label>
+              <input type="text" name="size" id="size_2" value="">
+            </p>
+            <p>
+              <label> Comidas</label>
+              <input type="text" name="size" id="size_3" value="" pattern="[0-9]" >
+            </p>
+            <p>
+              <label> Total estimado</label>
+              <input type="text" name="size" id="size_4" value="0.00 $">
+            </p>
+          </fieldset>
+  
+          <fieldset>
+            <legend>Metodo de pago utilizado:</legend>
+            <p>
+              <input type="radio" name="size" id="size_1" value="small">
+              <label for="size_1">Metalico</label>
+            </p>
+            <p>
+              <input type="radio" name="size" id="size_2" value="medium">
+              <label for="size_2">Tarjeta de credito</label>
+            </p>
+            <p>
+              <input type="radio" name="size" id="size_3" value="large">
+              <label for="size_3">Cheque</label>
+            </p>
+          </fieldset>
+        </div>
+        
+        <div>
+          <fieldset>
+            <legend>Proposito de viaje</legend>
+            <textarea name="textarea" rows="10" cols="50">...</textarea>
+          </fieldset>
+        </div>
+
+      </section>
+
+      <p> <button type="submit">Enviar</button> </p>
+
+    </form>
+
   </body>
 </html>
